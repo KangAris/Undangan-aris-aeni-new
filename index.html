@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Aris & Aeni</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf3;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: url('wayang-background.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .guest-name {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #f3f3f3;
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .photo {
+      max-width: 300px;
+      border-radius: 12px;
+      margin: 20px auto;
+    }
+    .btn {
+      background: #8b5e3c;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    footer {
+      background: #eee;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <h1>Aris & Aeni</h1>
+    <p>Undangan Pernikahan</p>
+    <p class="guest-name" id="guestName"></p>
+  </header>
+
+  <div class="section">
+    <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+    <p>Dengan memohon rahmat Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+    <img src="foto-berdua.jpg" alt="Foto Aris & Aeni" class="photo">
+    <h3>🗓️ 31 Agustus 2025</h3>
+    <h3>📍 Cariu Barat, Pangulah, Cikampek</h3>
+    <a href="https://wa.me/6281234567890" class="btn">Konfirmasi Kehadiran (RSVP)</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Aris & Aeni | Terima kasih atas doa & restunya
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const guest = params.get("to");
+    if (guest) {
+      document.getElementById("guestName").innerText = `Kepada Yth. Bapak/Ibu/Saudara/i ${decodeURIComponent(guest)}`;
+    }
+  </script>
+
+</body>
+</html>
